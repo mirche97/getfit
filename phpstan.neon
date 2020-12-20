@@ -1,0 +1,12 @@
+parameters:
+    level: 7
+    paths:
+        - %currentWorkingDirectory%/src/
+    excludes_analyse:
+        - %currentWorkingDirectory%/src/DataFixtures/*
+        - %currentWorkingDirectory%/src/Migrations/*
+    doctrine:
+        objectManagerLoader: tests/object-manager.php
+includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-doctrine/rules.neon
